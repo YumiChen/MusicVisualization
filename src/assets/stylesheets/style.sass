@@ -10,17 +10,59 @@
 html, body
   margin: 0
   min-height: 100vh
-  overflow-x: hidden
+  overflow: hidden
 
 body
-  background-image: url(../images/bg.jpg)
-  background-size: cover
-  background-repeat: no-repeat
-  &::-webkit-scrollbar-track
-    border: 1px solid blue
-    background-color: rgba(255,255,255,0.2)
-  &::-webkit-scrollbar
-    width: 6px
-    background-color: rgba(255,255,255,0.2)
-  &::-webkit-scrollbar-thumb
-    background-color: blue
+  background-color: #59ebf9
+  
+input[type='file']
+  display: none
+
+button:focus, button:active
+  outline: none
+
+%button
+  display: table
+  color: #fff
+  padding: 5px
+  border: solid 2px
+  border-radius: 10px
+  font-weight: bold
+  cursor: pointer
+  font-size: 36px
+  background-color: transparent
+  margin: auto
+  &:hover
+    background-color: #fff
+    border-color: #fff
+    color: #5bb7a8
+  
+%absolute-center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.FlyingCubes-UIContainer
+  @extend %absolute-center
+  z-index: 10
+
+.FlyingCubes-upload-btn, .FlyingCubes-refresh-btn
+  @extend %button
+
+.FlyingCubes-frame
+  width: 45vw
+  height: 60vh
+  border-radius: 10px
+  border: solid 2px #fff
+  margin-bottom: 20px
+  
+.FlyingCubes-refresh-btn
+  @extend %absolute-center
+  z-index: 10
+  
+@keyframes threeEnter
+  0%
+    opacity: 0
+  100%
+    opacity: 0.8

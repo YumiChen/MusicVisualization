@@ -1,7 +1,10 @@
-import React from "react";
+import React, {Component} from "react";
+import FlyingCubes from './FlyingCubes/FlyingCubes';
 
-const App = (props)=>{
-    return (<div>Template success!</div>);
+const App =()=>{
+    return (<div>
+        <FlyingCubes/>
+    </div>);
 }
 
 module.exports = App;
